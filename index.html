@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+
+    <body>
+        <!-- Prompts and alerts-->
+<!--
+        <script type="text/javascript">
+            window.alert("Welcome to this amazing and AWESOME site!!! Enjoy with caution :D");
+
+            //Prompt the user their name; Greet them by name using another alert
+
+            window.alert("Hi " + window.prompt("And what is your lovely name?") + ":D");
+
+        </script>
+
+-->
+
+        <!---Using the console--->
+        <script>
+            window.console.log("Blah Blah");
+        </script>
+
+        <script>
+          console.log("This is mostly used for debugging.", "We'll learn how to write directly into the HTML document a little later.")
+        </script>
+
+
+        <!--Exercise: Ask the user what their favorite sports team is. Secretly log a message trash-talking their team in the console.-->
+        <script>
+            console.log(window.prompt("What is you fav team?") + " is a crap team!!!");
+        </script>
+
+        <!-- Exercise 3:
+        -   Declare at least 10 variables such as 'name', 'age', 'birthday', 'hometown', 'occupation', 'favoriteFood', 'bestFriend', etc, and set their values equal to strings containing the appropriate information about yourself.
+        -   console.log a paragraph about yourself using the appropriate variables to insert the relevant information in the appropriate places.
+        -   Create a new HTML document and re-write the variables and the console.log in a <script> tag so that you'll have it for later. -->
+
+        <script>
+            var name="Irene", age="27", gender="female", birthday="August", favFood="rice", pet="PJ", siblings=2;
+
+           console.log("My name is "+name+ " and I am a " +gender+ " of " + age +" years. I have " +siblings+ " siblings, I have a dog named " +pet+ " and I love him to bits!!! My favourite food is " +favFood);
+
+        </script>
+
+
+    <!--Manipulating the DOM-->
+
+<!--
+    console.log is great for debugging, but more frequently, we'll want our JavaScript to change the visible page. First, let's ask the document to return us the first element that it finds that matches a valid CSS selector.
+
+    Open this page (http://morning-bastion-77397.herokuapp.com/students/examples/selecting.html) and try the following in the JavaScript console:
+
+    > document.body
+    > document.querySelector('p')
+    > document.querySelector('#primary')
+    > document.querySelector('.important')
+    > document.querySelector('p.important').textContent
+    > document.querySelector('#nav ol li').textContent
+-->
+    <script>
+    //Rewrites what is on the page to what is in the quotes below"
+    document.querySelector('h1, p').textContent = "I'm on the page!"
+
+    document.querySelector('h1').textContent = "Behold! For I am a mighty web document!"
+
+    var big_shot = document.querySelector('#primary')
+    big_shot.textContent = "Flippin' heck, I'm by far the most important element around!"
+    document.querySelector('.important').textContent = "Do all .important elements change or only one?"
+
+    </script>
+
+
+
+    </body>
+</html>
